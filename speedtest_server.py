@@ -39,19 +39,19 @@ HTML = """<!doctype html><html lang=en><meta charset=utf-8>
   /* blinking cursor */
   .stat .val.busy::after{content:"_";animation:blink 1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
-  button{margin-top:1.25rem;width:100%;padding:.7rem;cursor:pointer;
+  #go{margin-top:1.25rem;width:100%;padding:.7rem;cursor:pointer;
     font:inherit;letter-spacing:.15em;text-transform:uppercase;
     color:var(--grn);background:transparent;border:1px solid var(--grn);border-radius:3px;
     text-shadow:inherit;transition:.12s}
-  button:hover:not(:disabled){background:var(--grn);color:#000;text-shadow:none}
-  button:disabled{opacity:.4;cursor:default}
-  button::before{content:"[ "}button::after{content:" ]"}
+  #go:hover:not(:disabled){background:var(--grn);color:#000;text-shadow:none}
+  #go:disabled{opacity:.4;cursor:default}
+  #go::before{content:"[ "}#go::after{content:" ]"}
   .cmds{margin-top:1.5rem;font-size:.85rem;color:var(--dim);
     border-top:1px dashed var(--dim);padding-top:1rem}
   .cmds p{margin:.6rem 0 .25rem}
-  .row{display:flex;align-items:flex-start;gap:.5rem}
-  pre{margin:0;color:var(--grn);font-size:.85rem;flex:1;
-    white-space:pre-wrap;overflow-wrap:anywhere}
+  .row{display:flex;align-items:center;gap:.5rem}
+  pre{margin:0;color:var(--grn);font-size:.85rem;flex:1;min-width:0;
+    white-space:nowrap;overflow-x:auto}
   pre::before{content:"$ "}
   .cp{flex:none;cursor:pointer;background:transparent;color:var(--dim);
     border:1px solid var(--dim);border-radius:3px;padding:.15rem .4rem;
