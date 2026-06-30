@@ -49,8 +49,9 @@ HTML = """<!doctype html><html lang=en><meta charset=utf-8>
   .cmds{margin-top:1.5rem;font-size:.85rem;color:var(--dim);
     border-top:1px dashed var(--dim);padding-top:1rem}
   .cmds p{margin:.6rem 0 .25rem}
-  .row{display:flex;align-items:center;gap:.5rem}
-  pre{margin:0;color:var(--grn);overflow:auto;font-size:.85rem;flex:1}
+  .row{display:flex;align-items:flex-start;gap:.5rem}
+  pre{margin:0;color:var(--grn);font-size:.85rem;flex:1;
+    white-space:pre-wrap;overflow-wrap:anywhere}
   pre::before{content:"$ "}
   .cp{flex:none;cursor:pointer;background:transparent;color:var(--dim);
     border:1px solid var(--dim);border-radius:3px;padding:.15rem .4rem;
@@ -67,9 +68,9 @@ HTML = """<!doctype html><html lang=en><meta charset=utf-8>
   <button id=go>run test</button>
   <div class=cmds>
     <p>macOS / Linux</p>
-    <div class=row><button class=cp data-t=c1 title=copy>⧉</button><pre id=c1>curl -s __BASE__/ | sh</pre></div>
+    <div class=row><pre id=c1>curl -s __BASE__/ | sh</pre><button class=cp data-t=c1 title=copy>⧉</button></div>
     <p>Windows (PowerShell)</p>
-    <div class=row><button class=cp data-t=c2 title=copy>⧉</button><pre id=c2>iwr __BASE__/ | iex</pre></div>
+    <div class=row><pre id=c2>iwr __BASE__/ | iex</pre><button class=cp data-t=c2 title=copy>⧉</button></div>
   </div>
 </div>
 <script>
