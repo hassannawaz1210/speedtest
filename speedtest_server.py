@@ -174,5 +174,5 @@ class H(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     # Render sets $PORT; allow argv override for local use.
     port = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get("PORT", 8000))
-    print(f"serving on :{port}")
-    ThreadingHTTPServer(("", port), H).serve_forever()
+    print(f"serving on 0.0.0.0:{port}", flush=True)
+    ThreadingHTTPServer(("0.0.0.0", port), H).serve_forever()
