@@ -54,9 +54,8 @@ HTML = """<!doctype html><html lang=en><meta charset=utf-8>
     white-space:nowrap;overflow-x:auto}
   pre::before{content:"$ "}
   .cp{flex:none;cursor:pointer;background:transparent;color:var(--dim);
-    border:1px solid var(--dim);border-radius:3px;padding:.15rem .4rem;
-    font:inherit;font-size:.8rem;text-shadow:inherit}
-  .cp:hover{color:var(--grn);border-color:var(--grn)}
+    border:0;padding:.15rem .3rem;font:inherit;font-size:1rem;text-shadow:inherit}
+  .cp:hover{color:var(--grn)}
 </style>
 <body>
 <div class=card>
