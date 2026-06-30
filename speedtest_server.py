@@ -14,7 +14,8 @@ DOWN = f"https://speed.cloudflare.com/__down?bytes={BYTES}"
 # __BASE__ is replaced with the request origin (avoids brace-escaping CSS/JS).
 HTML = """<!doctype html><html lang=en><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>speedtest</title>
+<title>speedtest ⚡</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='black'/><text x='1' y='13' font-family='monospace' font-size='13' fill='%2333ff66'>%3E_</text></svg>">
 <style>
   /* green phosphor CRT */
   :root{--grn:#33ff66;--dim:#1f9a40;color-scheme:dark}
@@ -29,8 +30,8 @@ HTML = """<!doctype html><html lang=en><meta charset=utf-8>
     background:repeating-linear-gradient(rgba(0,0,0,0) 0 2px,rgba(0,0,0,.28) 2px 3px)}
   .card{width:min(92vw,32rem);margin:auto;border:1px solid var(--grn);border-radius:4px;
     padding:1.5rem 1.75rem;box-shadow:0 0 18px rgba(51,255,102,.25),inset 0 0 40px rgba(51,255,102,.04)}
-  h1{margin:0 0 1.25rem;font-size:1rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase}
-  h1::before{content:"\\2593 "}h1::after{content:" \\2593"}
+  h1{margin:0 0 1.5rem;font-size:1.1rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase}
+  h1::before{content:"> "}
   .stat{margin:.75rem 0}
   .stat .lbl{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--dim)}
   .stat .val{font-size:1.9rem;font-weight:700}
