@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: speedtest
+    runtime: python
+    plan: free
+    buildCommand: ""
+    startCommand: python speedtest_server.py
